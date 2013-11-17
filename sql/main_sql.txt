@@ -1,0 +1,24 @@
+CREATE TABLE user (
+	user_id int(11) NOT NULL PRIMARY KEY,
+	user_name varchar(50) NOT NULL,
+	password varchar(15) NOT NULL,
+	category varchar(50) NOT NULL,
+	pub_date timestamp NOT NULL
+)
+
+CREATE TABLE proposal (
+	proposal_id int(11) NOT NULL PRIMARY KEY,
+	title varchar(50),
+	description varchar(300),
+	category varchar(50),
+	user_id int(11),
+	pub_date timestamp NOT NULL
+)
+
+CREATE TABLE comment (
+	comment_id int(11) NOT NULL PRIMARY KEY,
+	proposal_id int(11),
+	title varchar(50),
+	description varchar(300),
+	pub_date timestamp NOT NULL
+)
